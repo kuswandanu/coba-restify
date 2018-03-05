@@ -3,7 +3,7 @@ var restify = require('restify');
 var server = restify.createServer();
 
 server.get('/', function (req, res, next) {
-    res.send('home')
+    res.send(`server created at ${process.env.IP}:${process.env.PORT}`)
     return next();
 });
 
